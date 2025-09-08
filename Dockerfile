@@ -1,4 +1,5 @@
-FROM tomcat:latest
-RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
-COPY /webapp/target/*.war /usr/local/tomcat/webapps
+
+FROM payara/server-full:latest
+COPY /webapp/target/your-app.war $DEPLOY_DIR
+
 
